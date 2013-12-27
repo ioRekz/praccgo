@@ -1,0 +1,122 @@
+/**
+ * Copyright 2013 Facebook, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'eraserregular';
+    src: url('/bower_components/fonts/EraserRegular-webfont.eot');
+    src: url('/bower_components/fonts/EraserRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/bower_components/fonts/EraserRegular-webfont.woff') format('woff'),
+         url('/bower_components/fonts/EraserRegular-webfont.ttf') format('truetype'),
+         url('/bower_components/fonts/EraserRegular-webfont.svg#eraserregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'scratchregular';
+    src: url('/bower_components/fonts/Scratch_-webfont.eot');
+    src: url('/bower_components/fonts/Scratch_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/bower_components/fonts/Scratch_-webfont.woff') format('woff'),
+         url('/bower_components/fonts/Scratch_-webfont.ttf') format('truetype'),
+         url('/bower_components/fonts/Scratch_-webfont.svg#scratchregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'shortstack';
+  src: url('/bower_components/fonts/ShortStack-Regular.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'shortstack', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
+  color: #555;
+}
+
+@-webkit-keyframes slider /* Safari and Chrome */
+{
+  from {left: 0%;}
+  to {left: 20%;}
+  /*0% {left: 0%;}
+  20% {left: 20%;}
+  40% {left: 40%;}
+  60% {left: 60%;}
+  80% {left: 80%;}
+  80% {left: 80%;}
+  100% {left: 100%;}*/
+  /*60%
+  80%
+  100%*/
+}
+@keyframes slider /* Safari and Chrome */
+{
+  from {left: 0%;}
+  to {left: 20%;}
+  /*0% {left: 0%;}
+  20% {left: 20%;}
+  40% {left: 40%;}
+  60% {left: 60%;}
+  80% {left: 80%;}
+  80% {left: 80%;}
+  100% {left: 100%;}*/
+  /*60%
+  80%
+  100%*/
+}
+
+.column.title {
+  padding: 10px;
+  /*color: #bbb;*/
+  color: white;
+  background-color: #454aa5;
+  position: relative;
+  z-index: -20 !important;
+}
+
+.row.news {
+  position: relative;
+}
+
+.zoomer {
+  height: 40px;
+  width: 160px;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background-color: white;
+  z-index: 0;
+  opacity: 0.5;
+
+  -webkit-animation:slider 2s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation:slider 2s infinite;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.title > .text {
+  z-index: 100;
+  position: relative;
+}
+
